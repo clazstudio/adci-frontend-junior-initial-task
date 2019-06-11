@@ -1,7 +1,11 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #ffffff;
 
-    background-color: #353436;
+  background-color: #353436;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
 }
