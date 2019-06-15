@@ -6,6 +6,39 @@ body {
   background-color: #353436;
 }
 
-h1 {
+/* ? */
+h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* *** button *** */
+
+.button {
+  display: inline-block;
+  padding: 7px 14px;
+
+  background: none;
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+
+  text-transform: uppercase;
+  transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #e2d1a6;
+  color: #000;
 }
