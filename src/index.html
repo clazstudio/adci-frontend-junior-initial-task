@@ -9,19 +9,19 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
-  <link href="./normalize.css" rel="stylesheet">
-  <link href="./style.css" rel="stylesheet">
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
 </head>
 <body>
   <div class="modal-wrapper">
 
     <div class="riservata-modal">
-      <h2 class="riservata-modal__header">Area riservata</h2>
+      <h1 class="riservata-modal__header">Area riservata</h1>
       <button class="riservata-modal__close" title="Close"></button>
       
       <div class="riservata-modal__content">
         <section class="riservata-modal__section">
-          <h3 class="riservata-modal__section-header">ACCEDI</h3>
+          <h2 class="riservata-modal__section-header">ACCEDI</h2>
           <form id="loginForm" class="riservata-modal__form">
             <input type="email" name="email" class="text-entry riservata-modal__entry" placeholder="E-mail" required>
             <input type="password" name="password" class="text-entry riservata-modal__entry" placeholder="Password" required>
@@ -30,7 +30,7 @@
           </form>
         </section>
         <section class="riservata-modal__section">
-          <h3 class="riservata-modal__section-header">REGISTRATI</h3>
+          <h2 class="riservata-modal__section-header">REGISTRATI</h2>
           <form id="registrationForm" class="riservata-modal__form">
             <input type="text" name="first_name" class="text-entry riservata-modal__entry" placeholder="Nome" required>
             <input type="text" name="last_name" class="text-entry riservata-modal__entry" placeholder="Cognome">
@@ -60,20 +60,21 @@
     <div class="header__bottom-part">
       <img class="header__logo" src="img/logo.png" alt="MM Lampadari Logo">
       <nav class="nav header__nav">
+        <!-- TODO: fill data-text using js -->
         <ul class="reset-list nav__list">
           <li class="nav__item"><a class="nav__link nav__link--active" href="#">Home</a></li>
           <li class="nav__item">
-            <a class="nav__link weight-fix" data-text="Azienda" href="#Azienda">Azienda</a>
+            <a class="nav__link" data-text="Azienda" href="#Azienda">Azienda</a>
             <ul class="reset-list nav__list">
-              <li class="nav__item"><a class="nav__link weight-fix" data-text="STORIA" href="#STORIA">STORIA</a></li>
-              <li class="nav__item"><a class="nav__link weight-fix" data-text="MM DESIGN" href="#MMDESIGN">MM DESIGN</a></li>
-              <li class="nav__item"><a class="nav__link weight-fix" data-text="DESIGNER" href="#DESIGNER">DESIGNER</a></li>
-              <li class="nav__item"><a class="nav__link weight-fix" data-text="CERTIFICAZIONI" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
+              <li class="nav__item"><a class="nav__link" data-text="STORIA" href="#STORIA">STORIA</a></li>
+              <li class="nav__item"><a class="nav__link" data-text="MM DESIGN" href="#MMDESIGN">MM DESIGN</a></li>
+              <li class="nav__item"><a class="nav__link" data-text="DESIGNER" href="#DESIGNER">DESIGNER</a></li>
+              <li class="nav__item"><a class="nav__link" data-text="CERTIFICAZIONI" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a class="nav__link weight-fix" data-text="Collezioni" href="#Collezioni">Collezioni</a></li>
-          <li class="nav__item"><a class="nav__link weight-fix" data-text="News" href="#News">News</a></li>
-          <li class="nav__item"><a class="nav__link weight-fix" data-text="Contatti" href="#Contatti">Contatti</a></li>
+          <li class="nav__item"><a class="nav__link" data-text="Collezioni" href="#Collezioni">Collezioni</a></li>
+          <li class="nav__item"><a class="nav__link" data-text="News" href="#News">News</a></li>
+          <li class="nav__item"><a class="nav__link" data-text="Contatti" href="#Contatti">Contatti</a></li>
         </ul>
       </nav>
     </div>
@@ -133,19 +134,19 @@
 
     <div class="footer__top-row">
       <section class="footer__section">
-        <h4 class="footer__section-header">Lampadari made in italy</h4>
+        <h3 class="footer__section-header">Lampadari made in italy</h3>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section">
-        <h4 class="footer__section-header">Lampadari artigianali</h4>
+        <h3 class="footer__section-header">Lampadari artigianali</h3>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section">
-        <h4 class="footer__section-header">45 anni di esperienza</h4>
+        <h3 class="footer__section-header">45 anni di esperienza</h3>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section footer__newsletter">
-        <h4 class="footer__section-header">NEWSLETTER</h4>
+        <h3 class="footer__section-header">NEWSLETTER</h3>
         <form id="newsletterForm" class="newsletter-form">
           <input type="text" name="full_name" class="text-entry" placeholder="Nome e Cognome" required>
           <input type="email" name="email" class="text-entry newsletter-form__email-input" placeholder="Email" required>
@@ -186,6 +187,6 @@
   </div>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
