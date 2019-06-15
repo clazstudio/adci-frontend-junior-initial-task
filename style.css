@@ -6,16 +6,172 @@ body {
   background-color: #353436;
 }
 
-/* ? */
+/* TODO: ? */
 h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+/* *** header *** */
+
+.header {
+  background-color: #353436;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.header__top-part {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header__bottom-part {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header__logo {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 23px;
+}
+
+.header__nav {
+  align-self: flex-end;
+}
+
+.area-riservata-button {
+  display: inline-block;
+  padding: 0 20px 0 0;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-image: url("img/lock.png");
+  background-repeat: no-repeat;
+  /* FIXME: wrong position */
+  background-position: center right;
+
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* *** home *** */
+
+.home {
+  /* FIXME: wrong bg size and pos */
+  background-image: url("img/main-bg-1.jpeg");
+  background-position: 38% 100%;
+  background-size: cover;
+  height: 670px;
+
+  /* prevent margin collapsing */
+  overflow: hidden;
+}
+
+.home__slogan {
+  margin-top: 200px;
+}
+
+
+/* *** footer *** */
+
+
+
+/* ********************************** */
+
+/* *** nav *** */
+/* FIXME: font weight jumps */
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+
+  background-color: #353436;
+  list-style: none;
+
+  font-kerning: none;
+}
+
+.nav__item {
+  position: relative;
+  margin-left: 25px;
+  padding: 20px 0;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+.nav__link {
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: #e2d1a6;
+  font-weight: 600;
+}
+
+.nav__link--active {
+  color: #e2d1a6;
+  font-weight: 700;
+  cursor: default;
+}
+
+.nav__link--active:hover {
+  font-weight: 700;
+}
+
+/* sub-menu */
+.nav__item .nav__list {
+  display: none;
+  padding: 8px;
+}
+
+/* show sub-menu on hover or focus */
+/* FIXME: sub-menu is not accesible from keyboard */
+.nav__item:hover .nav__list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 58px;
+  left: -16px;
+}
+
+/* sub-item */
+.nav__item .nav__item {
+  margin-left: 0;
+  padding: 8px;
+
+  font-size: 16px;
+  border-top: solid 1px #fff;
+}
+
+.nav__item .nav__item:first-of-type {
+  border-top: none;
+}
 
 /* *** checkbox *** */
 
@@ -28,6 +184,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .checkbox__input {
+  /* FIXME: firefox doesnt resize checkbox */
   width: 8px;
   height: 8px;
   opacity: 0;

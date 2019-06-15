@@ -7,12 +7,12 @@
   <title>MM Lampadari</title>
   
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
   <link href="./normalize.css" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
 </head>
-<body>
+<body class="layout">
   <div hidden>
     <div>
       <div>Area riservata</div>
@@ -47,23 +47,23 @@
     </div>
   </div>
 
-	<header class="header">
+	<header class="header layout__header">
   <div class="container header__container">
     <div class="header__top-part">
-      <button>Area riservata</button>
+      <button class="area-riservata-button">Area riservata</button>
     </div>
     <div class="header__bottom-part">
       <img class="header__logo" src="img/logo.png" alt="MM Lampadari Logo">
       <nav class="nav header__nav">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--active" href="#">Home</a></li>
           <li class="nav__item">
             <a class="nav__link" href="#Azienda">Azienda</a>
-            <ul>
-              <li><a class="nav__link" href="#STORIA">STORIA</a></li>
-              <li><a class="nav__link" href="#MMDESIGN">MM DESIGN</a></li>
-              <li><a class="nav__link" href="#DESIGNER">DESIGNER</a></li>
-              <li><a class="nav__link" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#STORIA">STORIA</a></li>
+              <li class="nav__item"><a class="nav__link" href="#MMDESIGN">MM DESIGN</a></li>
+              <li class="nav__item"><a class="nav__link" href="#DESIGNER">DESIGNER</a></li>
+              <li class="nav__item"><a class="nav__link" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
             </ul>
           </li>
           <li class="nav__item"><a class="nav__link" href="#Collezioni">Collezioni</a></li>
@@ -75,10 +75,11 @@
   </div>
   </header>
 
-  <main>
-    <div>
-        <h1>Lampadari contemporanei</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+  <main class="layout__page home">
+  <div class="container home__container">
+    <div class="home__slogan">
+      <h1>Lampadari contemporanei</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
     </div>
     
     <ul>
@@ -113,9 +114,10 @@
         </section>
       </div>
     </div>
+  </div>
   </main>
 
-  <footer class="footer">
+  <footer class="footer layout__footer">
     <section class="footer__section">
       <header>Lampadari made in italy</header>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
