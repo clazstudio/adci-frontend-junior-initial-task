@@ -13,37 +13,41 @@
   <link href="./style.css" rel="stylesheet">
 </head>
 <body class="layout">
-  <div hidden>
-    <div>
-      <div>Area riservata</div>
-      <button>close</button>
-      <section>
-        <header>ACCEDI</header>
-        <form id="loginForm">
-          <input type="email" name="email" class="text-entry" placeholder="E-mail">
-          <input type="password" name="password" class="text-entry" placeholder="Password">
-          <button type="submit" class="button">ACCEDI</button>
-          <a href="#">Password dimenticata</a>
-        </form>
-      </section>
-      <section>
-        <header>REGISTRATI</header>
-        <form id="registrationForm">
-          <input type="text" name="first_name" class="text-entry" placeholder="Nome">
-          <input type="text" name="last_name" class="text-entry" placeholder="Cognome">
-          <input type="email" name="email" class="text-entry" placeholder="E-mail">
-          <input type="password" name="password" class="text-entry" placeholder="Password">
-          <label class="checkbox">
-            <input type="checkbox" name="data" class="checkbox__input">
-            <span class="checkbox__text">Acconsento al trattamento dei dati</span>
-          </label>
-          <label class="check">
-            <input type="checkbox" name="newsletter" class="check__checkbox">
-            Mi iscrivo alla Newsletter
-          </label>
-          <button type="submit" class="button">ISCRIVITI</button>
-        </form>
-      </section>
+  <div class="modal-wrapper modal-wrapper--hidden">
+
+    <div class="riservata-modal">
+      <h2 class="riservata-modal__header">Area riservata</h2>
+      <button class="riservata-modal__close" title="Close"></button>
+      
+      <div class="riservata-modal__content">
+        <section class="riservata-modal__section">
+          <h3 class="riservata-modal__section-header">ACCEDI</h3>
+          <form id="loginForm" class="riservata-modal__form">
+            <input type="email" name="email" class="text-entry riservata-modal__entry" placeholder="E-mail" required>
+            <input type="password" name="password" class="text-entry riservata-modal__entry" placeholder="Password" required>
+            <button type="submit" class="button">ACCEDI</button>
+            <a class="text-button riservata-modal__pass-dimenticata" href="#passworddimenticata">Password dimenticata</a>
+          </form>
+        </section>
+        <section class="riservata-modal__section">
+          <h3 class="riservata-modal__section-header">REGISTRATI</h3>
+          <form id="registrationForm" class="riservata-modal__form">
+            <input type="text" name="first_name" class="text-entry riservata-modal__entry" placeholder="Nome" required>
+            <input type="text" name="last_name" class="text-entry riservata-modal__entry" placeholder="Cognome">
+            <input type="email" name="email" class="text-entry riservata-modal__entry" placeholder="E-mail" required>
+            <input type="password" name="password" class="text-entry riservata-modal__entry" placeholder="Password" required>
+            <label class="checkbox riservata-modal__checkbox">
+              <input type="checkbox" name="data" class="checkbox__input">
+              <span class="checkbox__text">Acconsento al trattamento dei dati</span>
+            </label>
+            <label class="checkbox riservata-modal__checkbox">
+              <input type="checkbox" name="newsletter" class="checkbox__input">
+              <span class="checkbox__text"></span>Mi iscrivo alla Newsletter</span>
+            </label>
+            <button type="submit" class="button">ISCRIVITI</button>
+          </form>
+        </section>
+      </div>
     </div>
   </div>
 
@@ -69,7 +73,7 @@
           </li>
           <li class="nav__item"><a class="nav__link" href="#Collezioni">Collezioni</a></li>
           <li class="nav__item"><a class="nav__link" href="#News">News</a></li>
-          <li class="nav__item"><a class="nav__link" href="#n">Contatti</a></li>
+          <li class="nav__item"><a class="nav__link" href="#Contatti">Contatti</a></li>
         </ul>
       </nav>
     </div>
@@ -80,41 +84,44 @@
   <main class="layout__page home">
   <div class="container home__container">
 
-    <div class="home__slogan">
-      <h1>Lampadari contemporanei</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
-    </div>
+    <aside class="home__slogan">
+      <h1 class="home__slogan-header">Lampadari contemporanei</h1>
+      <p class="home__slogan-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing<br>
+        elit, sed do eiusmod tempor dolore
+      </p>
+    </aside>
     
-    <ul>
+    <ul class="home__slider-controls">
       <li>1</li>
       <li>2</li>
       <li>3</li>
     </ul>
     
-    <div>
-      <button>show</button>
-      <div>
-        <section>
-          <header><h2>Stai pensando ad un progetto?</h2></header>
-          <p>
+    <div class="post-dropup home__post-dropup post-dropup--hidden">
+      <button class="post-dropup__switch" title="Hide"></button>
+      <div class="post-dropup__content">
+        <article class="post post-dropup__section">
+          <h2 class="post__header">Stai pensando ad un progetto?</h2>
+          <p class="post__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore 
           </p>
-          <a href="">Approfondisci</a>
-        </section>
-        <section>
-          <header><h2>Vi aspettiamo alla fiera Euroluce</h2</header>
-          <p>
+          <a class="post__more" href="#post1">Approfondisci</a>
+        </article>
+        <article class="post post-dropup__section">
+          <h2 class="post__header">Vi aspettiamo alla fiera Euroluce</h2>
+          <p class="post__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore 
           </p>
-          <a href="">Approfondisci</a>
-        </section>
-        <section>
-          <header><h2>Scopri la nuova collezione</h2></header>
-          <p>
+          <a class="post__more" href="#post2">Approfondisci</a>
+        </article>
+        <article class="post post-dropup__section">
+          <h2 class="post__header">Scopri la nuova collezione<br><br></h2>
+          <p class="post__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore 
           </p>
-          <a href="">Approfondisci</a>
-        </section>
+          <a class="post__more" href="#post3">Approfondisci</a>
+        </article>
       </div>
     </div>
 
@@ -140,8 +147,8 @@
       <section class="footer__section footer__newsletter">
         <header class="footer__section-header">NEWSLETTER</header>
         <form id="newsletterForm" class="newsletter-form">
-          <input type="text" name="full_name" class="text-entry" placeholder="Nome e Cognome">
-          <input type="email" name="email" class="text-entry newsletter-form__email-input" placeholder="Email">
+          <input type="text" name="full_name" class="text-entry" placeholder="Nome e Cognome" required>
+          <input type="email" name="email" class="text-entry newsletter-form__email-input" placeholder="Email" required>
           <label class="checkbox newsletter-form__data-check">
             <input class="checkbox__input" type="checkbox" name="data">
             <span class="checkbox__text">Acconsento al trattamento dei dati</span>
