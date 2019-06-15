@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
   <link href="./normalize.css" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
 </head>
-<body class="layout">
+<body>
   <div class="modal-wrapper">
 
     <div class="riservata-modal">
@@ -37,12 +37,12 @@
             <input type="email" name="email" class="text-entry riservata-modal__entry" placeholder="E-mail" required>
             <input type="password" name="password" class="text-entry riservata-modal__entry" placeholder="Password" required>
             <label class="checkbox riservata-modal__checkbox">
-              <input type="checkbox" name="data" class="checkbox__input">
+              <input type="checkbox" name="data" class="checkbox__input" required>
               <span class="checkbox__text">Acconsento al trattamento dei dati</span>
             </label>
             <label class="checkbox riservata-modal__checkbox">
               <input type="checkbox" name="newsletter" class="checkbox__input">
-              <span class="checkbox__text"></span>Mi iscrivo alla Newsletter</span>
+              <span class="checkbox__text">Mi iscrivo alla Newsletter</span>
             </label>
             <button type="submit" class="button">ISCRIVITI</button>
           </form>
@@ -60,20 +60,20 @@
     <div class="header__bottom-part">
       <img class="header__logo" src="img/logo.png" alt="MM Lampadari Logo">
       <nav class="nav header__nav">
-        <ul class="nav__list">
+        <ul class="reset-list nav__list">
           <li class="nav__item"><a class="nav__link nav__link--active" href="#">Home</a></li>
           <li class="nav__item">
-            <a class="nav__link" href="#Azienda">Azienda</a>
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#STORIA">STORIA</a></li>
-              <li class="nav__item"><a class="nav__link" href="#MMDESIGN">MM DESIGN</a></li>
-              <li class="nav__item"><a class="nav__link" href="#DESIGNER">DESIGNER</a></li>
-              <li class="nav__item"><a class="nav__link" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
+            <a class="nav__link weight-fix" data-text="Azienda" href="#Azienda">Azienda</a>
+            <ul class="reset-list nav__list">
+              <li class="nav__item"><a class="nav__link weight-fix" data-text="STORIA" href="#STORIA">STORIA</a></li>
+              <li class="nav__item"><a class="nav__link weight-fix" data-text="MM DESIGN" href="#MMDESIGN">MM DESIGN</a></li>
+              <li class="nav__item"><a class="nav__link weight-fix" data-text="DESIGNER" href="#DESIGNER">DESIGNER</a></li>
+              <li class="nav__item"><a class="nav__link weight-fix" data-text="CERTIFICAZIONI" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#Collezioni">Collezioni</a></li>
-          <li class="nav__item"><a class="nav__link" href="#News">News</a></li>
-          <li class="nav__item"><a class="nav__link" href="#Contatti">Contatti</a></li>
+          <li class="nav__item"><a class="nav__link weight-fix" data-text="Collezioni" href="#Collezioni">Collezioni</a></li>
+          <li class="nav__item"><a class="nav__link weight-fix" data-text="News" href="#News">News</a></li>
+          <li class="nav__item"><a class="nav__link weight-fix" data-text="Contatti" href="#Contatti">Contatti</a></li>
         </ul>
       </nav>
     </div>
@@ -81,7 +81,7 @@
   </div>
   </header>
 
-  <main class="layout__page home">
+  <main class="layout__page home slider">
   <div class="container home__container">
 
     <aside class="home__slogan">
@@ -92,11 +92,11 @@
       </p>
     </aside>
     
-    <ul class="home__slider-controls">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
+    <div class="home__slider-controls slider__controls">
+      <a href="#" data-img="./img/main-bg-1.jpeg" class="slider__button slider__button--active"></a>
+      <a href="#" data-img="./img/main-bg-2.jpeg" class="slider__button"></a>
+      <a href="#" data-img="./img/main-bg-3.jpeg" class="slider__button"></a>
+    </div>
     
     <div class="post-dropup home__post-dropup">
       <button class="post-dropup__switch" title="Show posts"></button>
@@ -133,24 +133,24 @@
 
     <div class="footer__top-row">
       <section class="footer__section">
-        <header class="footer__section-header">Lampadari made in italy</header>
+        <h4 class="footer__section-header">Lampadari made in italy</h4>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section">
-        <header class="footer__section-header">Lampadari artigianali</header>
+        <h4 class="footer__section-header">Lampadari artigianali</h4>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section">
-        <header class="footer__section-header">45 anni di esperienza</header>
+        <h4 class="footer__section-header">45 anni di esperienza</h4>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section footer__newsletter">
-        <header class="footer__section-header">NEWSLETTER</header>
+        <h4 class="footer__section-header">NEWSLETTER</h4>
         <form id="newsletterForm" class="newsletter-form">
           <input type="text" name="full_name" class="text-entry" placeholder="Nome e Cognome" required>
           <input type="email" name="email" class="text-entry newsletter-form__email-input" placeholder="Email" required>
           <label class="checkbox newsletter-form__data-check">
-            <input class="checkbox__input" type="checkbox" name="data">
+            <input class="checkbox__input" type="checkbox" name="data" required>
             <span class="checkbox__text">Acconsento al trattamento dei dati</span>
           </label>
           <button type="submit" class="button">ISCRIVITI</button>
@@ -159,7 +159,7 @@
     </div>
 
     <div class="footer__bottom-row">
-      <ul class="footer__contacts">
+      <ul class="reset-list footer__contacts">
         <li class="footer__contacts-item">MMLAMPADARI srl</li>
         <li class="footer__contacts-item">Via Feltrina 00</li>
         <li class="footer__contacts-item">31111 Pederobba  (TV)</li>
@@ -175,7 +175,7 @@
         <a class="soc__item soc__item--pinterest" href="https://pinterest.com/" target="_blank"
           rel="noopener noreferrer" title="Pinterest"></a>
       </div>
-      <ul class="footer__lang lang">
+      <ul class="reset-list footer__lang lang">
         <li class="lang__item"><a class="lang__link" href="#lang_ITA">ITA</a></li>
         <li class="lang__item"><a class="lang__link" href="#lang_ENG">ENG</a></li>
         <li class="lang__item"><a class="lang__link" href="#lang_DEU">DEU</a></li>

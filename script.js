@@ -9,8 +9,10 @@ function toggleModal() {
     setTimeout(function() {
       modalWrapper.style.display = "";
     }, 200);
+    areaRiservataBtn.focus();
   } else {
     modalWrapper.style.display = "flex";
+    closeButton.focus();
   }
 
   setTimeout(function() {
@@ -20,23 +22,73 @@ function toggleModal() {
 
 areaRiservataBtn.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
+modalWrapper.addEventListener("click", function(evt) {
+  if (evt.target == modalWrapper) {
+    toggleModal();
+  }
+});
 
 // drop-up panel with posts toggle
 
-var dropupSwitch = document.querySelector(".post-dropup__switch");
-var dropUp = document.querySelector(".post-dropup");
+function setupDropUp(block) {
+  var dropupSwitch = block.querySelector(".post-dropup__switch");
 
-function toggleDropUp() {
-  var parent_height = dropUp.parentElement.clientHeight;
-  if (dropUp.classList.contains("post-dropup--show")) {
-    dropupSwitch.title = "Show posts";
-    dropUp.style.top = (parent_height - dropupSwitch.clientHeight) + "px";
-  } else {
-    dropupSwitch.title = "Hide";
-    dropUp.style.top = (parent_height - dropUp.clientHeight) + "px";
+  dropupSwitch.onclick = function() {
+    var parent_height = block.parentElement.clientHeight;
+    if (block.classList.contains("post-dropup--show")) {
+      dropupSwitch.title = "Show posts";
+      block.style.top = (parent_height - dropupSwitch.clientHeight) + "px";
+    } else {
+      dropupSwitch.title = "Hide";
+      block.style.top = (parent_height - block.clientHeight) + "px";
+    }
+
+    block.classList.toggle("post-dropup--show");
   }
-
-  dropUp.classList.toggle("post-dropup--show");
 }
 
-dropupSwitch.addEventListener("click", toggleDropUp);
+setupDropUp(document.querySelector(".post-dropup"));
+
+// slider
+
+function setupSlider(slider, delay) {
+  var curIndex = 0;
+  var controls = slider.querySelectorAll(".slider__button");
+  var images = [];
+
+  function fadeOut(index) {
+    controls[index].classList.remove("slider__button--active");
+  }
+
+  function fadeIn(index) {
+    slider.style["background-image"] = "url('" + images[index] + "')";
+    controls[index].classList.add("slider__button--active");
+  }
+
+  for (var i = 0; i < controls.length; i++) {
+    if (controls[i].classList.contains("slider__button--active")) {
+      curIndex = i;
+    }
+    images.push(controls[i].getAttribute("data-img"));
+    
+    controls[i].index = i;
+    controls[i].onclick = function(evt) {
+      evt.preventDefault();
+      fadeOut(curIndex);
+      fadeIn(evt.target.index);
+      curIndex = evt.target.index;
+    }
+  }
+
+  fadeIn(curIndex);
+  setInterval(function() {
+    fadeOut(curIndex);
+    curIndex++;
+    if (curIndex >= controls.length) {
+      curIndex = 0;
+    }
+    fadeIn(curIndex);
+  }, delay);
+}
+
+setupSlider(document.querySelector(".slider"), 10000);
