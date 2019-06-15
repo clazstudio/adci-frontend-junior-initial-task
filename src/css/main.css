@@ -10,6 +10,25 @@ h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
 }
 
+button {
+  outline-color: #e2c271;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  outline-color: #e2c271;
+}
+
+a:hover {
+  color: #e2d1a6;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -77,6 +96,13 @@ h1, h2, h3, h4, h5 {
   background-position: center;
   border: none;
   cursor: pointer;
+  opacity: 1;
+
+  transition: opacity 100ms ease-in-out;
+}
+
+.riservata-modal__close:hover {
+  opacity: 0.75;
 }
 
 .riservata-modal__content {
@@ -112,7 +138,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .riservata-modal__pass-dimenticata {
+  display: inline-block;
+
   margin-top: 10px;
+  font-size: 12px;
+  line-height: 1;
+  color: #b5b4b4;
+
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
 }
 
 .riservata-modal__form {
@@ -156,7 +190,7 @@ h1, h2, h3, h4, h5 {
 
 /* *** area-riservata-button *** */
 
-.area-riservata-button {
+.header__riservata-button {
   display: inline-block;
   padding: 2px 20px 0 0;
 
@@ -166,14 +200,20 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   background-image: url("../img/lock.png");
   background-repeat: no-repeat;
-  /* FIXME: wrong position */
   background-position: center right;
+  opacity: 1;
 
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
+  
+  transition: opacity 100ms ease-in-out;
+}
+
+.header__riservata-button:hover {
+  opacity: 0.75;
 }
 
 /* *** home *** */
@@ -254,6 +294,8 @@ h1, h2, h3, h4, h5 {
   background-repeat: no-repeat;
   /* background-size: cover; */
 
+
+  /* FIXME: firefox cant do this transition (chrome and opera can)*/
   transition: background-image 500ms linear;
 }
 
@@ -273,7 +315,6 @@ h1, h2, h3, h4, h5 {
   border: 2px solid #000;
   cursor: pointer;
 
-  /* FIXME: transition tested only in Chrome, firefox cant do it */
   transition: background-color 100ms ease-in-out;
 }
 
@@ -308,6 +349,12 @@ h1, h2, h3, h4, h5 {
   background-position: center;
   border: none;
   cursor: pointer;
+
+  transition: background-color 100ms ease-in-out;
+}
+
+.post-dropup__switch:hover {
+  background-color: #e2d1a6;
 }
 
 .post-dropup--show .post-dropup__switch {
@@ -365,15 +412,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .post__more:hover {
+  color: inherit;
   text-decoration: underline;
 }
 
 .post-dropup__section:nth-child(1) {
   background-color: #e2d1a6;
-}
-
-.post-dropup__section:nth-child(1) .post__more {
-  color: #fff;
 }
 
 .post-dropup__section:nth-child(3) {
@@ -535,10 +579,6 @@ h1, h2, h3, h4, h5 {
   transition: color 100ms ease-in-out;
 }
 
-.lang__link:hover {
-  color: #e2d1a6;
-}
-
 /* *** newsletter form *** */
 
 .newsletter-form {
@@ -583,10 +623,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav__link {
+  display: inline-block;
   color: #ffffff;
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -605,7 +647,11 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-/* HACK: reserve width for focus state */
+.nav__link--active:active {
+  text-decoration: none;
+}
+
+/* HACK: reserve width for focus state. Data-text fills using JS */
 .nav__link::after {
   display: block;
   content: attr(data-text);
@@ -631,7 +677,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* show sub-menu on hover or focus */
-/* FIXME: sub-menu is not accesible from keyboard */
+/* FIXME: sub-menu is not accesible from keyboard using TAB */
 .nav__item:hover .nav__list {
   visibility: visible;
 }
@@ -712,7 +758,8 @@ h1, h2, h3, h4, h5 {
 /* *** text entries *** */
 
 .text-entry {
-  padding: 0 7px;
+  padding: 4px 7px;
+  min-height: 24px;
 
   background: none;
   border: none;
@@ -721,12 +768,18 @@ h1, h2, h3, h4, h5 {
   color: #000;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  line-height: 32px;
+  line-height: 24px;
   font-weight: 300;
+  outline: none;
 }
 
 .text-entry::placeholder {
   color: #8c8c8c;
+}
+
+.text-entry:focus {
+  padding-bottom: 0;
+  border-bottom: 4px solid #dfba5e;
 }
 
 /* *** buttons *** */
@@ -753,19 +806,6 @@ h1, h2, h3, h4, h5 {
 .button:hover {
   background-color: #e2d1a6;
   color: #000;
-}
-
-.text-button {
-  font-size: 12px;
-  line-height: 1;
-  color: #b5b4b4;
-
-  text-decoration: none;
-  transition: color 100ms ease-in-out;
-}
-
-.text-button:hover {
-  color: #e2d1a6;
 }
 
 /* ****************** MEDIA ****************** */

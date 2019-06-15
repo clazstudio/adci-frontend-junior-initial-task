@@ -12,8 +12,8 @@ npx http-server ./src
 
 TODO
 ----
-- [ ] base styles for a, h1, h2, ...
-- [ ] :hover, :active, :focus for all links
+- [x] base styles for a, h1, h2, ...
+- [x] :hover, :active, :focus for all links
 - [ ] spritesheet for icons
 - [ ] hotreload
 - [ ] configure linters, formatters and validators

@@ -1,33 +1,3 @@
-// toggle modal window
-
-var modalWrapper = document.querySelector(".modal-wrapper");
-var areaRiservataBtn = document.querySelector(".area-riservata-button");
-var closeButton = document.querySelector(".riservata-modal__close");
-
-function toggleModal() {
-  if (modalWrapper.classList.contains("modal-wrapper--show")) {
-    setTimeout(function() {
-      modalWrapper.style.display = "";
-    }, 200);
-    areaRiservataBtn.focus();
-  } else {
-    modalWrapper.style.display = "flex";
-    closeButton.focus();
-  }
-
-  setTimeout(function() {
-    modalWrapper.classList.toggle("modal-wrapper--show");
-  }, 0);
-}
-
-areaRiservataBtn.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-modalWrapper.addEventListener("click", function(evt) {
-  if (evt.target == modalWrapper) {
-    toggleModal();
-  }
-});
-
 // drop-up panel with posts toggle
 
 function setupDropUp(block) {
@@ -46,8 +16,6 @@ function setupDropUp(block) {
     block.classList.toggle("post-dropup--show");
   }
 }
-
-setupDropUp(document.querySelector(".post-dropup"));
 
 // slider
 
@@ -91,4 +59,46 @@ function setupSlider(slider, delay) {
   }, delay);
 }
 
+// toggle modal window
+
+var modalWrapper = document.querySelector(".modal-wrapper");
+var areaRiservataBtn = document.querySelector(".header__riservata-button");
+var closeButton = document.querySelector(".riservata-modal__close");
+
+function toggleModal() {
+  if (modalWrapper.classList.contains("modal-wrapper--show")) {
+    setTimeout(function() {
+      modalWrapper.style.display = "";
+    }, 200);
+    areaRiservataBtn.focus();
+  } else {
+    modalWrapper.style.display = "flex";
+    closeButton.focus();
+  }
+
+  setTimeout(function() {
+    modalWrapper.classList.toggle("modal-wrapper--show");
+  }, 0);
+}
+
+// menu items - width reserving
+
+var menuLinks = document.querySelectorAll(".nav__link");
+console.log(menuLinks);
+
+for (var link of menuLinks) {
+  link.setAttribute("data-text", link.innerText || link.innerHTML);
+}
+
+// init
+
+setupDropUp(document.querySelector(".post-dropup"));
 setupSlider(document.querySelector(".slider"), 10000);
+
+areaRiservataBtn.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+modalWrapper.addEventListener("click", function(evt) {
+  if (evt.target == modalWrapper) {
+    toggleModal();
+  }
+});

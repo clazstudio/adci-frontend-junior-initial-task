@@ -26,7 +26,7 @@
             <input type="email" name="email" class="text-entry riservata-modal__entry" placeholder="E-mail" required>
             <input type="password" name="password" class="text-entry riservata-modal__entry" placeholder="Password" required>
             <button type="submit" class="button">ACCEDI</button>
-            <a class="text-button riservata-modal__pass-dimenticata" href="#passworddimenticata">Password dimenticata</a>
+            <a class="riservata-modal__pass-dimenticata" href="#passworddimenticata">Password dimenticata</a>
           </form>
         </section>
         <section class="riservata-modal__section">
@@ -55,26 +55,25 @@
   <div class="container header__container">
 
     <div class="header__top-part">
-      <button class="area-riservata-button">Area riservata</button>
+      <button class="header__riservata-button">Area riservata</button>
     </div>
     <div class="header__bottom-part">
-      <img class="header__logo" src="img/logo.png" alt="MM Lampadari Logo">
+      <img class="header__logo" src="img/logo.png" alt="MM Lampadari Logo" title="MM Lampadari Logo">
       <nav class="nav header__nav">
-        <!-- TODO: fill data-text using js -->
         <ul class="reset-list nav__list">
-          <li class="nav__item"><a class="nav__link nav__link--active" href="#">Home</a></li>
+          <li class="nav__item"><a class="nav__link nav__link--active" href="">Home</a></li>
           <li class="nav__item">
-            <a class="nav__link" data-text="Azienda" href="#Azienda">Azienda</a>
+            <a class="nav__link" href="#Azienda">Azienda</a>
             <ul class="reset-list nav__list">
-              <li class="nav__item"><a class="nav__link" data-text="STORIA" href="#STORIA">STORIA</a></li>
-              <li class="nav__item"><a class="nav__link" data-text="MM DESIGN" href="#MMDESIGN">MM DESIGN</a></li>
-              <li class="nav__item"><a class="nav__link" data-text="DESIGNER" href="#DESIGNER">DESIGNER</a></li>
-              <li class="nav__item"><a class="nav__link" data-text="CERTIFICAZIONI" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
+              <li class="nav__item"><a class="nav__link" href="#STORIA">STORIA</a></li>
+              <li class="nav__item"><a class="nav__link" href="#MMDESIGN">MM DESIGN</a></li>
+              <li class="nav__item"><a class="nav__link" href="#DESIGNER">DESIGNER</a></li>
+              <li class="nav__item"><a class="nav__link" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a class="nav__link" data-text="Collezioni" href="#Collezioni">Collezioni</a></li>
-          <li class="nav__item"><a class="nav__link" data-text="News" href="#News">News</a></li>
-          <li class="nav__item"><a class="nav__link" data-text="Contatti" href="#Contatti">Contatti</a></li>
+          <li class="nav__item"><a class="nav__link" href="#Collezioni">Collezioni</a></li>
+          <li class="nav__item"><a class="nav__link" href="#News">News</a></li>
+          <li class="nav__item"><a class="nav__link" href="#Contatti">Contatti</a></li>
         </ul>
       </nav>
     </div>
@@ -94,9 +93,9 @@
     </aside>
     
     <div class="home__slider-controls slider__controls">
-      <a href="#" data-img="./img/main-bg-1.jpeg" class="slider__button slider__button--active"></a>
-      <a href="#" data-img="./img/main-bg-2.jpeg" class="slider__button"></a>
-      <a href="#" data-img="./img/main-bg-3.jpeg" class="slider__button"></a>
+      <a href="#" data-img="./img/main-bg-1.jpeg" class="slider__button slider__button--active" title="Slide 1"></a>
+      <a href="#" data-img="./img/main-bg-2.jpeg" class="slider__button" title="Slide 2"></a>
+      <a href="#" data-img="./img/main-bg-3.jpeg" class="slider__button" title="Slide 3"></a>
     </div>
     
     <div class="post-dropup home__post-dropup">
@@ -139,7 +138,7 @@
       </section>
       <section class="footer__section">
         <h3 class="footer__section-header">Lampadari artigianali</h3>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud</a> exercitation ullamco laboris nisi ut aliquip ex ea  
       </section>
       <section class="footer__section">
         <h3 class="footer__section-header">45 anni di esperienza</h3>
