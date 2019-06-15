@@ -2,22 +2,170 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>mmlampadari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MM Lampadari</title>
   
-  <link href="./normalize.css" rel="stylesheet">
-  <link href="./style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link href="./normalize.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-	<header>
+  <div hidden>
+    <div>
+      <div>Area riservata</div>
+      <button>close</button>
+      <section>
+        <header>ACCEDI</header>
+        <form id="loginForm">
+          <input type="email" name="email" class="text-entry" placeholder="E-mail">
+          <input type="password" name="password" class="text-entry" placeholder="Password">
+          <button type="submit" class="button">ACCEDI</button>
+          <a href="#">Password dimenticata</a>
+        </form>
+      </section>
+      <section>
+        <header>REGISTRATI</header>
+        <form id="registrationForm">
+          <input type="text" name="first_name" class="text-entry" placeholder="Nome">
+          <input type="text" name="last_name" class="text-entry" placeholder="Cognome">
+          <input type="email" name="email" class="text-entry" placeholder="E-mail">
+          <input type="password" name="password" class="text-entry" placeholder="Password">
+          <label class="checkbox">
+            <input type="checkbox" name="data" class="checkbox__input">
+            <span class="checkbox__text">Acconsento al trattamento dei dati</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="newsletter" class="check__checkbox">
+            Mi iscrivo alla Newsletter
+          </label>
+          <button type="submit" class="button">ISCRIVITI</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+	<header class="header">
+  <div class="container header__container">
+    <div class="header__top-part">
+      <button>Area riservata</button>
+    </div>
+    <div class="header__bottom-part">
+      <img class="header__logo" src="img/logo.png" alt="MM Lampadari Logo">
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#Azienda">Azienda</a>
+            <ul>
+              <li><a class="nav__link" href="#STORIA">STORIA</a></li>
+              <li><a class="nav__link" href="#MMDESIGN">MM DESIGN</a></li>
+              <li><a class="nav__link" href="#DESIGNER">DESIGNER</a></li>
+              <li><a class="nav__link" href="#CERTIFICAZIONI">CERTIFICAZIONI</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#Collezioni">Collezioni</a></li>
+          <li class="nav__item"><a class="nav__link" href="#News">News</a></li>
+          <li class="nav__item"><a class="nav__link" href="#n">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
   </header>
+
   <main>
-    <h1>Lampadari contemporanei</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore </p>
+    <div>
+        <h1>Lampadari contemporanei</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+    </div>
+    
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    
+    <div>
+      <button>show</button>
+      <div>
+        <section>
+          <header><h2>Stai pensando ad un progetto?</h2></header>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore 
+          </p>
+          <a href="">Approfondisci</a>
+        </section>
+        <section>
+          <header><h2>Vi aspettiamo alla fiera Euroluce</h2</header>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore 
+          </p>
+          <a href="">Approfondisci</a>
+        </section>
+        <section>
+          <header><h2>Scopri la nuova collezione</h2></header>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore 
+          </p>
+          <a href="">Approfondisci</a>
+        </section>
+      </div>
+    </div>
   </main>
-  <footer>
+
+  <footer class="footer">
+    <section class="footer__section">
+      <header>Lampadari made in italy</header>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+    </section>
+    <section class="footer__section">
+      <header>lampadari artigianali</header>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+    </section>
+    <section class="footer__section">
+      <header>45 anni di esperienza</header>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  
+    </section>
+    <section class="footer__section">
+      <header>NEWSLETTER</header>
+      <form id="newsletterForm">
+        <input type="text" name="name" class="text-entry" placeholder="Nome e Cognome">
+        <input type="email" name="email" class="text-entry" placeholder="Email">
+        <label>
+          <input type="checkbox" name="data">
+          Acconsento al trattamento dei dati
+        </label>
+        <button type="submit" class="button">ISCRIVITI</button>
+      </form>
+    </section>
+
+    <div class="footer__bottom-bar">
+      <div>
+        <ul>
+          <li>MMLAMPADARI srl</li>
+          <li>Via Feltrina 00</li>
+          <li>31111 Pederobba  (TV)</li>
+          <li>0423.123456</li>
+          <li>info@mmlampadari.mm</li>
+          <li>P.IVA 04123456789</li>
+        </ul>
+      </div>
+      <div>
+        <a href="http://ya.ru" target="_blank" rel="noopener noreferrer">facebook</a>
+        <a href="http://ya.ru" target="_blank" rel="noopener noreferrer">instagram</a>
+        <a href="http://ya.ru" target="_blank" rel="noopener noreferrer">pinterest</a>
+      </div>
+      <div>
+        <ul>
+          <li>ITA</li>
+          <li>ENG</li>
+          <li>DEU</li>
+          <li>PYC</li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
