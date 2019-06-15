@@ -17,26 +17,36 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
 }
 
+
+@media (max-width: 1240px) {
+  .container {
+    box-sizing: content-box;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+}
+
 /* *** modal *** */
 
 .modal-wrapper {
   position: fixed;
   display: flex;
+  display: none;
+
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 
   background-color: rgba(255, 255, 255, 0.6);
-  opacity: 1;
+  opacity: 0;
   z-index: 100;
 
   transition: opacity 200ms ease-in-out;
 }
 
-.modal-wrapper--hidden {
-  display: none;
-  opacity: 0;
+.modal-wrapper--show {
+  opacity: 1;
 }
 
 .riservata-modal {
@@ -206,7 +216,6 @@ h1, h2, h3, h4, h5 {
   padding-left: 25px;
 
   background-color: rgba(255, 255, 255, 0.85);
-  
 }
 
 .home__slogan-header {
@@ -241,15 +250,11 @@ h1, h2, h3, h4, h5 {
 .post-dropup {
   position: absolute;
   display: block;
-  bottom: 0;
-
-  transition: all 500ms ease-in-out;
-}
-
-.post-dropup--hidden {
   top: calc(100% - 30px);
-}
+  
+  transition: top 500ms ease-in-out;
 
+}
 .post-dropup__switch {
   display: block;
   width: 88px;
@@ -257,15 +262,15 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
 
   background-color: #fff;
-  background-image: url("img/arrow-down.png");
+  background-image: url("img/arrow-up.png");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   cursor: pointer;
 }
 
-.post-dropup--hidden .post-dropup__switch {
-  background-image: url("img/arrow-up.png");
+.post-dropup--show .post-dropup__switch {
+  background-image: url("img/arrow-down.png");
 }
 
 .post-dropup__content {
@@ -521,7 +526,7 @@ h1, h2, h3, h4, h5 {
 .nav__list {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 
