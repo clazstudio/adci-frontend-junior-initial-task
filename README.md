@@ -2,12 +2,18 @@ mmlampadari
 ===========
 ADCI test task solution: https://github.com/ADCI/frontend-junior-initial-task
 
-Run
----
-Run dev server with html validation and hotreload
-```
-gulp serve
-```
+Usage
+-----
+1. Install dependencies and `gulp-cli`
+   ```
+   npm i
+   npm install -g gulp-cli
+   ```
+
+2. Run dev server with html validation and hotreload
+   ```
+   gulp serve
+   ```
 
 TODO
 ----
