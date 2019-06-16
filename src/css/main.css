@@ -286,15 +286,18 @@ a:active {
 /* *** slider *** */
 
 .slider {
-  /* FIXME: wrong bg size and pos */
   background-color: #9a998e;
   background-image: url("../img/main-bg-1.jpeg");
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
 
-  /* FIXME: firefox cant do this transition (chrome and opera can)*/
   transition: background-image 500ms linear;
+}
+
+@media (min-width: 1400px) {
+  .slider {
+    background-size: cover;
+  }
 }
 
 .slider__controls {
@@ -814,12 +817,6 @@ a:active {
 }
 
 /* ****************** MEDIA ****************** */
-
-@media (min-width: 1530px) {
-  .slider {
-    background-size: cover;
-  }
-}
 
 @media (max-width: 1240px) {
   .container {

@@ -1,6 +1,6 @@
 mmlampadari
 ===========
-ADCI test task: https://github.com/ADCI/frontend-junior-initial-task
+ADCI test task solution: https://github.com/ADCI/frontend-junior-initial-task
 
 Run
 ---
@@ -11,15 +11,6 @@ gulp serve
 
 TODO
 ----
-- [x] base styles for a, h1, h2, ...
-- [x] :hover, :active, :focus for all links
+- [ ] spritesheet for icons
 - [ ] configure linters, formatters and validators
-  - [x] hotreload
-  - [x] gulp-w3c-html-validator
-  - [ ] stylelint ?
-  - [ ] ESLint ?
-  - [x] Prettier
-  - [ ] postcss (autoprefixer, sorting)
-  - [ ] spritesheet for icons
-- [ ] use Twig templates ?
-- [ ] split css into separate files, may be use scss
+- [ ] dont keep all in single css and html file
