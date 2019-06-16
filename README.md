@@ -1,25 +1,25 @@
 mmlampadari
 ===========
-Тестовое задание ADCI: https://github.com/ADCI/frontend-junior-initial-task
-
-__WIP__
+ADCI test task: https://github.com/ADCI/frontend-junior-initial-task
 
 Run
 ---
+Run dev server with html validation and hotreload
 ```
-npx http-server ./src
+gulp serve
 ```
 
 TODO
 ----
 - [x] base styles for a, h1, h2, ...
 - [x] :hover, :active, :focus for all links
-- [ ] spritesheet for icons
-- [ ] hotreload
 - [ ] configure linters, formatters and validators
-  - [ ] gulp-w3c-html-validator
-  - [ ] csslint
-  - [ ] ESLint
-  - [ ] Prettier
+  - [x] hotreload
+  - [x] gulp-w3c-html-validator
+  - [ ] stylelint ?
+  - [ ] ESLint ?
+  - [x] Prettier
   - [ ] postcss (autoprefixer, sorting)
+  - [ ] spritesheet for icons
 - [ ] use Twig templates ?
+- [ ] split css into separate files, may be use scss

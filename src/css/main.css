@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   color: #ffffff;
 
@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 button {
@@ -208,7 +208,7 @@ a:active {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
-  
+
   transition: opacity 100ms ease-in-out;
 }
 
@@ -294,7 +294,6 @@ a:active {
   background-repeat: no-repeat;
   /* background-size: cover; */
 
-
   /* FIXME: firefox cant do this transition (chrome and opera can)*/
   transition: background-image 500ms linear;
 }
@@ -333,7 +332,7 @@ a:active {
   position: absolute;
   display: block;
   top: calc(100% - 30px);
-  
+
   transition: top 500ms ease-in-out;
 }
 
@@ -464,7 +463,7 @@ a:active {
 .footer__section-header {
   margin: 0;
   margin-bottom: 20px;
-  
+
   font-size: 14px;
   line-height: 1;
   color: #fefefe;
@@ -475,7 +474,6 @@ a:active {
 .footer__newsletter {
   box-sizing: border-box;
   padding-right: 5px;
-
 }
 
 .footer__bottom-row {
